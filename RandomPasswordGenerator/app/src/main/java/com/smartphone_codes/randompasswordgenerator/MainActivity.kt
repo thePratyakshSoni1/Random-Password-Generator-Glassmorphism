@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity(){
 
         if(savedInstanceState != null){
             passTXT.text=savedInstanceState.getString(PASSKEY, null)
-            if(passTXT.text==""){
+            if(passTXT.text==""||passTXT.text.isBlank()||passTXT.text.isNullOrEmpty()){
                 clearBtn.visibility=View.GONE
             }else{
                 clearBtn.visibility=View.VISIBLE
